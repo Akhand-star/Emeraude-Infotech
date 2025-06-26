@@ -53,11 +53,24 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
             </Button>
           </div>
 
-          <div className="mt-6 pt-4 border-t border-gray-200 text-center space-y-2">
-            <p className="text-sm font-medium text-gray-700">Contact Information</p>
-            <p className="text-sm text-gray-600">📞 +91 9163739982</p>
-            <p className="text-sm text-gray-600">📧 info@emeraudeinfotech.com</p>
-            <p className="text-xs text-gray-500 mt-3">We typically respond within 24 hours</p>
+          <div className="mt-6 pt-4 border-t border-gray-200">
+            <div className="text-center space-y-3">
+              <p className="text-sm font-semibold text-gray-800">Contact Information</p>
+
+              <div className="flex items-center justify-center space-x-2">
+                <Phone className="w-4 h-4 text-purple-700" />
+                <span className="text-sm font-medium text-gray-700">+91 9163739982</span>
+              </div>
+
+              <div className="flex items-center justify-center space-x-2">
+                <Mail className="w-4 h-4 text-purple-700" />
+                <span className="text-sm font-medium text-gray-700">info@emeraudeinfotech.com</span>
+              </div>
+
+              <p className="text-xs text-gray-500 mt-4 pt-2 border-t border-gray-100">
+                We typically respond within 24 hours
+              </p>
+            </div>
           </div>
         </CardContent>
       </Card>

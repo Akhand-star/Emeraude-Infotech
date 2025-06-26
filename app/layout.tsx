@@ -46,6 +46,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `
+            /* Additional Vercel toolbar blocking */
+            [data-vercel-toolbar] { display: none !important; }
+            .__vercel_toolbar { display: none !important; }
+            #vercel-live-feedback { display: none !important; }
+          `,
+          }}
+        />
+      </head>
       <body className={`${inter.className} ${montserrat.variable}`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           <Navigation />

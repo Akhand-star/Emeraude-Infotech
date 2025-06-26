@@ -14,6 +14,10 @@ const nextConfig = {
   env: {
     NEXT_PUBLIC_SITE_URL: 'https://emeraudeinfotech.com',
   },
+  // Hide Vercel toolbar in production
+  experimental: {
+    disableOptimizedLoading: true,
+  },
 }
 
 export default nextConfig
