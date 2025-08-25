@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     title: "Emeraude Infotech - Premier Staffing & IT Solutions",
     description: "Premier staffing, recruitment, and IT solutions company serving PAN India.",
   },
-    generator: 'v0.dev'
+    generator: 'v0.app'
 }
 
 export default function RootLayout({
@@ -50,10 +50,30 @@ export default function RootLayout({
         <style
           dangerouslySetInnerHTML={{
             __html: `
-            /* Additional Vercel toolbar blocking */
-            [data-vercel-toolbar] { display: none !important; }
-            .__vercel_toolbar { display: none !important; }
-            #vercel-live-feedback { display: none !important; }
+            /* Complete Vercel toolbar blocking */
+            [data-vercel-toolbar],
+            .__vercel_toolbar,
+            #vercel-live-feedback,
+            [class*="vercel-toolbar"],
+            [id*="vercel-toolbar"],
+            [data-testid*="vercel"],
+            div[data-vercel],
+            iframe[src*="vercel"] { 
+              display: none !important; 
+              visibility: hidden !important;
+              opacity: 0 !important;
+              pointer-events: none !important;
+              position: absolute !important;
+              left: -9999px !important;
+              top: -9999px !important;
+              width: 0 !important;
+              height: 0 !important;
+              z-index: -9999 !important;
+            }
+            /* Block floating elements except our own */
+            div[style*="position: fixed"]:not(.fixed):not([class*="whatsapp"]):not([class*="career"]):not([class*="modal"]) {
+              display: none !important;
+            }
           `,
           }}
         />

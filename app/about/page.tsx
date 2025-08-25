@@ -39,14 +39,14 @@ export default function AboutPage() {
               </div>
               <div className="space-y-4 lg:space-y-6 text-base lg:text-lg text-gray-600 leading-relaxed">
                 <p>
-                  Emeraude Infotech Private Limited was acquired and transformed by{" "}
-                  <strong className="text-purple-700">Akhand Kumar Singh</strong>, who recognized the urgent need for
-                  smarter, more reliable staffing and IT solutions in India.
+                  Emeraude Infotech Private Limited was founded with a vision to transform the staffing and IT solutions
+                  landscape in India. We recognized the urgent need for smarter, more reliable recruitment and
+                  technology services that truly understand the evolving needs of modern businesses.
                 </p>
                 <p>
-                  With strong business acumen and an entrepreneurial mindset, Akhand revitalized the company with a
-                  vision to build a future-ready workforce and tech-enabled recruitment ecosystem. Today, we proudly
-                  serve startups, SMEs, and large enterprises across India with customized, results-driven solutions.
+                  With strong business acumen and an entrepreneurial mindset, our company has grown to become a trusted
+                  partner for startups, SMEs, and large enterprises across India. We deliver customized, results-driven
+                  solutions that help businesses build exceptional teams and optimize their operations.
                 </p>
               </div>
             </div>
@@ -90,43 +90,6 @@ export default function AboutPage() {
                 <p className="text-gray-600 text-base lg:text-lg leading-relaxed">
                   To become India's most trusted partner in staffing and IT solutions—recognized for our innovation,
                   quality, and commitment to building long-term partnerships that transform businesses and careers.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </section>
-
-        {/* Leadership Section - Responsive */}
-        <section className="mb-16 lg:mb-24">
-          <div className="text-center mb-12 lg:mb-16">
-            <div className="inline-flex items-center px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium mb-4">
-              <Users className="w-4 h-4 mr-2" />
-              Leadership
-            </div>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Driving Growth with Purpose
-            </h2>
-          </div>
-
-          <div className="max-w-2xl mx-auto">
-            <Card className="border-0 shadow-2xl hover:shadow-3xl transition-all duration-300 group">
-              <CardContent className="p-8 lg:p-12 text-center">
-                <div className="relative mb-6 lg:mb-8">
-                  <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-purple-600/20 rounded-full blur-2xl group-hover:blur-3xl transition-all"></div>
-                  <img
-                    src="/placeholder.svg?height=150&width=150"
-                    alt="Akhand Kumar Singh"
-                    className="relative w-32 h-32 lg:w-40 lg:h-40 rounded-full mx-auto object-cover border-4 border-white shadow-xl"
-                  />
-                </div>
-                <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-2 text-gray-900">Akhand Kumar Singh</h3>
-                <p className="text-purple-700 font-semibold mb-4 lg:mb-6 text-lg lg:text-xl">
-                  Owner & Managing Director
-                </p>
-                <p className="text-gray-600 text-base lg:text-lg leading-relaxed">
-                  Visionary entrepreneur with proven expertise in business development and strategic partnerships.
-                  Akhand leads Emeraude Infotech with a focus on innovation, client satisfaction, and sustainable
-                  growth.
                 </p>
               </CardContent>
             </Card>

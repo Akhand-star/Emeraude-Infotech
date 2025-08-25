@@ -115,3 +115,67 @@ div[style*="position: fixed"][style*="z-index"] {
   height: auto !important;
   overflow: visible !important;
 }
+
+/* Complete Vercel Toolbar Removal */
+[data-vercel-toolbar],
+[data-vercel-toolbar] *,
+.__vercel_toolbar,
+.__vercel_toolbar *,
+#vercel-live-feedback,
+#vercel-live-feedback *,
+[class*="vercel-toolbar"],
+[class*="vercel-toolbar"] *,
+[id*="vercel-toolbar"],
+[id*="vercel-toolbar"] *,
+[data-testid*="vercel"],
+[data-testid*="toolbar"],
+div[data-vercel],
+div[class*="vercel"],
+iframe[src*="vercel"],
+iframe[src*="toolbar"],
+[aria-label*="Vercel"],
+[title*="Vercel"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  position: absolute !important;
+  left: -9999px !important;
+  top: -9999px !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  z-index: -9999 !important;
+}
+
+/* Block any floating elements that might be Vercel related */
+div[style*="position: fixed"][style*="z-index"]:not(.fixed):not([class*="whatsapp"]):not([class*="career"]):not(
+    [class*="modal"]
+  ) {
+  display: none !important;
+}
+
+/* Ensure our components remain visible */
+.fixed,
+[class*="modal"],
+[class*="whatsapp"],
+[class*="career"] {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  position: fixed !important;
+  left: auto !important;
+  top: auto !important;
+  width: auto !important;
+  height: auto !important;
+  overflow: visible !important;
+  z-index: auto !important;
+}
+
+/* Additional blocking for any Vercel injected scripts */
+script[src*="vercel"],
+script[data-vercel],
+link[href*="vercel"] {
+  display: none !important;
+}

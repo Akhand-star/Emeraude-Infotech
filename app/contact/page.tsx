@@ -131,7 +131,7 @@ export default function ContactPage() {
                     <label htmlFor="service" className="block text-sm font-semibold text-gray-700 mb-2 lg:mb-3">
                       Service Interest *
                     </label>
-                    <Select onValueChange={(value) => handleChange("service", value)}>
+                    <Select value={formData.service} onValueChange={(value) => handleChange("service", value)}>
                       <SelectTrigger className="h-10 lg:h-12 text-base lg:text-lg border-gray-300 focus:border-purple-500 focus:ring-purple-500">
                         <SelectValue placeholder="Select a service" />
                       </SelectTrigger>
@@ -251,7 +251,7 @@ export default function ContactPage() {
                 </p>
                 <Button
                   variant="outline"
-                  className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm text-base lg:text-lg px-6 lg:px-8 py-3 lg:py-4 h-auto w-full sm:w-auto"
+                  className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm text-base lg:text-lg px-6 lg:px-8 py-3 lg:py-4 h-auto w-full sm:w-auto bg-transparent"
                   onClick={() => window.open("tel:+919163739982")}
                 >
                   Call: +91 9163739982

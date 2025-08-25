@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -222,7 +221,7 @@ export default function CareerModal({ isOpen, onClose }: CareerModalProps) {
                   <Label htmlFor="industry" className="text-sm font-semibold text-gray-700 mb-2 block">
                     Industry *
                   </Label>
-                  <Select onValueChange={(value) => handleChange("industry", value)}>
+                  <Select value={formData.industry} onValueChange={(value) => handleChange("industry", value)}>
                     <SelectTrigger className="h-10 lg:h-12 text-base border-gray-300 focus:border-purple-500 focus:ring-purple-500">
                       <SelectValue placeholder="Select industry" />
                     </SelectTrigger>
@@ -242,7 +241,7 @@ export default function CareerModal({ isOpen, onClose }: CareerModalProps) {
                   <Label htmlFor="experience" className="text-sm font-semibold text-gray-700 mb-2 block">
                     Experience (Years) *
                   </Label>
-                  <Select onValueChange={(value) => handleChange("experience", value)}>
+                  <Select value={formData.experience} onValueChange={(value) => handleChange("experience", value)}>
                     <SelectTrigger className="h-10 lg:h-12 text-base border-gray-300 focus:border-purple-500 focus:ring-purple-500">
                       <SelectValue placeholder="Select experience" />
                     </SelectTrigger>
