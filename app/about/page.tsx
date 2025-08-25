@@ -3,11 +3,60 @@ import { Target, Globe, Award, Users, CheckCircle, TrendingUp } from "lucide-rea
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen py-12 sm:py-16 lg:py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen py-12 sm:py-16 lg:py-20 relative">
+      {/* Responsive background pattern overlay */}
+      <div className="fixed inset-0 opacity-3 sm:opacity-4 lg:opacity-5 pointer-events-none">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `url("https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%7BA15D75D6-CC38-4C1B-8A44-DBEB888F3CD3%7D-dS8R0EH7ImtBTX8Q7dljHgA7z04qNu.png")`,
+            backgroundSize: "60px 60px", // Smaller on mobile
+            backgroundRepeat: "repeat",
+          }}
+        />
+      </div>
+
+      {/* Additional mobile-optimized pattern layer */}
+      <div className="fixed inset-0 opacity-2 sm:opacity-3 lg:opacity-4 pointer-events-none sm:hidden">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `url("https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%7BA15D75D6-CC38-4C1B-8A44-DBEB888F3CD3%7D-dS8R0EH7ImtBTX8Q7dljHgA7z04qNu.png")`,
+            backgroundSize: "40px 40px", // Even smaller for mobile
+            backgroundRepeat: "repeat",
+            backgroundPosition: "10px 10px", // Offset for mobile
+          }}
+        />
+      </div>
+
+      {/* Tablet-specific pattern */}
+      <div className="fixed inset-0 opacity-3 pointer-events-none hidden sm:block lg:hidden">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `url("https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%7BA15D75D6-CC38-4C1B-8A44-DBEB888F3CD3%7D-dS8R0EH7ImtBTX8Q7dljHgA7z04qNu.png")`,
+            backgroundSize: "80px 80px", // Medium size for tablets
+            backgroundRepeat: "repeat",
+          }}
+        />
+      </div>
+
+      {/* Desktop pattern */}
+      <div className="fixed inset-0 opacity-4 pointer-events-none hidden lg:block">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `url("https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%7BA15D75D6-CC38-4C1B-8A44-DBEB888F3CD3%7D-dS8R0EH7ImtBTX8Q7dljHgA7z04qNu.png")`,
+            backgroundSize: "120px 120px", // Full size for desktop
+            backgroundRepeat: "repeat",
+          }}
+        />
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section - Responsive */}
         <div className="text-center mb-12 lg:mb-20">
-          <div className="inline-flex items-center px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium mb-4 lg:mb-6">
+          <div className="inline-flex items-center px-4 py-2 bg-purple-100/90 backdrop-blur-sm text-purple-700 rounded-full text-sm font-medium mb-4 lg:mb-6">
             <Award className="w-4 h-4 mr-2" />
             About Emeraude Infotech
           </div>
@@ -29,7 +78,7 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div className="space-y-6 lg:space-y-8 order-2 lg:order-1">
               <div>
-                <div className="inline-flex items-center px-4 py-2 bg-teal-100 text-teal-700 rounded-full text-sm font-medium mb-4">
+                <div className="inline-flex items-center px-4 py-2 bg-teal-100/90 backdrop-blur-sm text-teal-700 rounded-full text-sm font-medium mb-4">
                   <Globe className="w-4 h-4 mr-2" />
                   Our Story
                 </div>
@@ -37,7 +86,7 @@ export default function AboutPage() {
                   Built on Vision. Driven by Impact.
                 </h2>
               </div>
-              <div className="space-y-4 lg:space-y-6 text-base lg:text-lg text-gray-600 leading-relaxed">
+              <div className="space-y-4 lg:space-y-6 text-base lg:text-lg text-gray-600 leading-relaxed bg-white/80 backdrop-blur-sm rounded-2xl p-6 lg:p-8">
                 <p>
                   Emeraude Infotech Private Limited was founded with a vision to transform the staffing and IT solutions
                   landscape in India. We recognized the urgent need for smarter, more reliable recruitment and
@@ -68,7 +117,7 @@ export default function AboutPage() {
             <p className="text-lg lg:text-xl text-gray-600">Driving transformation through innovative solutions</p>
           </div>
           <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
-            <Card className="border-0 shadow-2xl hover:shadow-3xl transition-all duration-300">
+            <Card className="border-0 shadow-2xl hover:shadow-3xl transition-all duration-300 bg-white/90 backdrop-blur-sm">
               <CardContent className="p-8 lg:p-10">
                 <div className="w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-purple-100 to-purple-200 rounded-2xl flex items-center justify-center mb-4 lg:mb-6">
                   <Target className="w-6 h-6 lg:w-8 lg:h-8 text-purple-700" />
@@ -81,7 +130,7 @@ export default function AboutPage() {
               </CardContent>
             </Card>
 
-            <Card className="border-0 shadow-2xl hover:shadow-3xl transition-all duration-300">
+            <Card className="border-0 shadow-2xl hover:shadow-3xl transition-all duration-300 bg-white/90 backdrop-blur-sm">
               <CardContent className="p-8 lg:p-10">
                 <div className="w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-teal-100 to-teal-200 rounded-2xl flex items-center justify-center mb-4 lg:mb-6">
                   <Globe className="w-6 h-6 lg:w-8 lg:h-8 text-teal-700" />
@@ -138,7 +187,7 @@ export default function AboutPage() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 text-center p-4 lg:p-6">
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 text-center p-4 lg:p-6 bg-white/90 backdrop-blur-sm">
               <CardContent className="p-0">
                 <div className="w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-purple-100 to-purple-200 rounded-2xl flex items-center justify-center mx-auto mb-4 lg:mb-6">
                   <Globe className="w-6 h-6 lg:w-8 lg:h-8 text-purple-700" />
@@ -149,7 +198,7 @@ export default function AboutPage() {
               </CardContent>
             </Card>
 
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 text-center p-4 lg:p-6">
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 text-center p-4 lg:p-6 bg-white/90 backdrop-blur-sm">
               <CardContent className="p-0">
                 <div className="w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-teal-100 to-teal-200 rounded-2xl flex items-center justify-center mx-auto mb-4 lg:mb-6">
                   <TrendingUp className="w-6 h-6 lg:w-8 lg:h-8 text-teal-700" />
@@ -160,7 +209,7 @@ export default function AboutPage() {
               </CardContent>
             </Card>
 
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 text-center p-4 lg:p-6">
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 text-center p-4 lg:p-6 bg-white/90 backdrop-blur-sm">
               <CardContent className="p-0">
                 <div className="w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-purple-100 to-teal-100 rounded-2xl flex items-center justify-center mx-auto mb-4 lg:mb-6">
                   <CheckCircle className="w-6 h-6 lg:w-8 lg:h-8 text-purple-700" />
@@ -171,7 +220,7 @@ export default function AboutPage() {
               </CardContent>
             </Card>
 
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 text-center p-4 lg:p-6">
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 text-center p-4 lg:p-6 bg-white/90 backdrop-blur-sm">
               <CardContent className="p-0">
                 <div className="w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-teal-100 to-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-4 lg:mb-6">
                   <Users className="w-6 h-6 lg:w-8 lg:h-8 text-teal-700" />
@@ -182,7 +231,7 @@ export default function AboutPage() {
               </CardContent>
             </Card>
 
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 text-center p-4 lg:p-6 sm:col-span-2 lg:col-span-1">
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 text-center p-4 lg:p-6 sm:col-span-2 lg:col-span-1 bg-white/90 backdrop-blur-sm">
               <CardContent className="p-0">
                 <div className="w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-purple-100 to-purple-200 rounded-2xl flex items-center justify-center mx-auto mb-4 lg:mb-6">
                   <Award className="w-6 h-6 lg:w-8 lg:h-8 text-purple-700" />

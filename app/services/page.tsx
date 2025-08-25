@@ -19,11 +19,48 @@ import Link from "next/link"
 
 export default function ServicesPage() {
   return (
-    <div className="min-h-screen py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen py-20 relative">
+      {/* Mobile-optimized background pattern */}
+      <div className="fixed inset-0 opacity-2 sm:opacity-3 lg:opacity-4 pointer-events-none sm:hidden">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `url("https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%7B9AE52112-F6F8-45B7-812B-595964696A42%7D-wsz1wTbASzfYBsLhXYCQprjPAQ6HRg.png")`,
+            backgroundSize: "50px 50px", // Small for mobile
+            backgroundRepeat: "repeat",
+            backgroundPosition: "5px 5px",
+          }}
+        />
+      </div>
+
+      {/* Tablet-optimized pattern */}
+      <div className="fixed inset-0 opacity-3 sm:opacity-4 pointer-events-none hidden sm:block lg:hidden">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `url("https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%7B9AE52112-F6F8-45B7-812B-595964696A42%7D-wsz1wTbASzfYBsLhXYCQprjPAQ6HRg.png")`,
+            backgroundSize: "75px 75px", // Medium for tablets
+            backgroundRepeat: "repeat",
+          }}
+        />
+      </div>
+
+      {/* Desktop pattern */}
+      <div className="fixed inset-0 opacity-4 lg:opacity-5 pointer-events-none hidden lg:block">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `url("https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%7B9AE52112-F6F8-45B7-812B-595964696A42%7D-wsz1wTbASzfYBsLhXYCQprjPAQ6HRg.png")`,
+            backgroundSize: "100px 100px", // Full size for desktop
+            backgroundRepeat: "repeat",
+          }}
+        />
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <div className="text-center mb-20">
-          <div className="inline-flex items-center px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium mb-6">
+          <div className="inline-flex items-center px-4 py-2 bg-purple-100/90 backdrop-blur-sm text-purple-700 rounded-full text-sm font-medium mb-6">
             <Award className="w-4 h-4 mr-2" />
             Our Services
           </div>
@@ -43,7 +80,7 @@ export default function ServicesPage() {
         <section className="mb-24">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Staffing Solutions */}
-            <Card className="border-0 shadow-2xl hover:shadow-3xl transition-all duration-300 group">
+            <Card className="border-0 shadow-2xl hover:shadow-3xl transition-all duration-300 group bg-white/90 backdrop-blur-sm">
               <CardHeader className="p-10 pb-6">
                 <div className="flex items-center mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-100 to-purple-200 rounded-2xl flex items-center justify-center mr-6 group-hover:scale-110 transition-transform">
@@ -84,7 +121,7 @@ export default function ServicesPage() {
             </Card>
 
             {/* Executive Search */}
-            <Card className="border-0 shadow-2xl hover:shadow-3xl transition-all duration-300 group">
+            <Card className="border-0 shadow-2xl hover:shadow-3xl transition-all duration-300 group bg-white/90 backdrop-blur-sm">
               <CardHeader className="p-10 pb-6">
                 <div className="flex items-center mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-teal-100 to-teal-200 rounded-2xl flex items-center justify-center mr-6 group-hover:scale-110 transition-transform">
@@ -125,7 +162,7 @@ export default function ServicesPage() {
             </Card>
 
             {/* IT Outsourcing */}
-            <Card className="border-0 shadow-2xl hover:shadow-3xl transition-all duration-300 group">
+            <Card className="border-0 shadow-2xl hover:shadow-3xl transition-all duration-300 group bg-white/90 backdrop-blur-sm">
               <CardHeader className="p-10 pb-6">
                 <div className="flex items-center mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-100 to-teal-100 rounded-2xl flex items-center justify-center mr-6 group-hover:scale-110 transition-transform">
@@ -166,7 +203,7 @@ export default function ServicesPage() {
             </Card>
 
             {/* Payroll Compliance */}
-            <Card className="border-0 shadow-2xl hover:shadow-3xl transition-all duration-300 group">
+            <Card className="border-0 shadow-2xl hover:shadow-3xl transition-all duration-300 group bg-white/90 backdrop-blur-sm">
               <CardHeader className="p-10 pb-6">
                 <div className="flex items-center mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-teal-100 to-purple-100 rounded-2xl flex items-center justify-center mr-6 group-hover:scale-110 transition-transform">
@@ -211,7 +248,7 @@ export default function ServicesPage() {
         {/* Industry Expertise */}
         <section className="mb-24">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center px-4 py-2 bg-teal-100 text-teal-700 rounded-full text-sm font-medium mb-4">
+            <div className="inline-flex items-center px-4 py-2 bg-teal-100/90 backdrop-blur-sm text-teal-700 rounded-full text-sm font-medium mb-4">
               <Globe className="w-4 h-4 mr-2" />
               Industry Expertise
             </div>
@@ -225,7 +262,7 @@ export default function ServicesPage() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="text-center border-0 shadow-lg hover:shadow-2xl transition-all duration-300 group">
+            <Card className="text-center border-0 shadow-lg hover:shadow-2xl transition-all duration-300 group bg-white/90 backdrop-blur-sm">
               <CardContent className="p-8">
                 <div className="w-20 h-20 bg-gradient-to-br from-purple-100 to-purple-200 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                   <Code className="w-10 h-10 text-purple-700" />
@@ -237,7 +274,7 @@ export default function ServicesPage() {
               </CardContent>
             </Card>
 
-            <Card className="text-center border-0 shadow-lg hover:shadow-2xl transition-all duration-300 group">
+            <Card className="text-center border-0 shadow-lg hover:shadow-2xl transition-all duration-300 group bg-white/90 backdrop-blur-sm">
               <CardContent className="p-8">
                 <div className="w-20 h-20 bg-gradient-to-br from-teal-100 to-teal-200 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                   <Headphones className="w-10 h-10 text-teal-700" />
@@ -249,7 +286,7 @@ export default function ServicesPage() {
               </CardContent>
             </Card>
 
-            <Card className="text-center border-0 shadow-lg hover:shadow-2xl transition-all duration-300 group">
+            <Card className="text-center border-0 shadow-lg hover:shadow-2xl transition-all duration-300 group bg-white/90 backdrop-blur-sm">
               <CardContent className="p-8">
                 <div className="w-20 h-20 bg-gradient-to-br from-purple-100 to-teal-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                   <TrendingUp className="w-10 h-10 text-purple-700" />
@@ -261,7 +298,7 @@ export default function ServicesPage() {
               </CardContent>
             </Card>
 
-            <Card className="text-center border-0 shadow-lg hover:shadow-2xl transition-all duration-300 group">
+            <Card className="text-center border-0 shadow-lg hover:shadow-2xl transition-all duration-300 group bg-white/90 backdrop-blur-sm">
               <CardContent className="p-8">
                 <div className="w-20 h-20 bg-gradient-to-br from-teal-100 to-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                   <Shield className="w-10 h-10 text-teal-700" />
@@ -276,7 +313,7 @@ export default function ServicesPage() {
         </section>
 
         {/* Why Choose Our Services */}
-        <section className="mb-24 bg-gray-50 rounded-3xl p-16">
+        <section className="mb-24 bg-gray-50/90 backdrop-blur-sm rounded-3xl p-16">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Why Choose{" "}
@@ -346,7 +383,7 @@ export default function ServicesPage() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm text-lg px-10 py-4 h-auto"
+                className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm text-lg px-10 py-4 h-auto bg-transparent"
                 onClick={() => window.open("tel:+919163739982")}
               >
                 Call: +91 9163739982
