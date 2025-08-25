@@ -13,8 +13,8 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
   if (!isOpen) return null
 
   return (
-    <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-      <Card className="w-full max-w-md border-0 shadow-2xl">
+    <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[8000] flex items-center justify-center p-4">
+      <Card className="w-full max-w-md border-0 shadow-2xl relative z-[8001]">
         <CardHeader className="p-6 pb-4 relative">
           <button
             onClick={onClose}
@@ -42,7 +42,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
 
             <Button
               variant="outline"
-              className="w-full border-purple-700 text-purple-700 hover:bg-purple-50 text-base lg:text-lg py-4 h-auto justify-center"
+              className="w-full border-purple-700 text-purple-700 hover:bg-purple-50 text-base lg:text-lg py-4 h-auto justify-center bg-transparent"
               onClick={() => {
                 window.open("mailto:info@emeraudeinfotech.com")
                 onClose()

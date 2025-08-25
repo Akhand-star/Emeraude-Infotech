@@ -131,11 +131,11 @@ export default function ContactPage() {
                     <label htmlFor="service" className="block text-sm font-semibold text-gray-700 mb-2 lg:mb-3">
                       Service Interest *
                     </label>
-                    <Select value={formData.service} onValueChange={(value) => handleChange("service", value)}>
+                    <Select required value={formData.service} onValueChange={(value) => handleChange("service", value)}>
                       <SelectTrigger className="h-10 lg:h-12 text-base lg:text-lg border-gray-300 focus:border-purple-500 focus:ring-purple-500">
                         <SelectValue placeholder="Select a service" />
                       </SelectTrigger>
-                      <SelectContent>
+                      <SelectContent className="z-[9999]">
                         <SelectItem value="staffing">Permanent & Contract Staffing</SelectItem>
                         <SelectItem value="executive-search">Executive Search & Bulk Hiring</SelectItem>
                         <SelectItem value="it-outsourcing">IT Outsourcing</SelectItem>
